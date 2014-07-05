@@ -6,18 +6,31 @@ dotHIV parsedown bundle for Symfony2 install Parsedown and provides a twig filte
 
 ## Install
 
+```
     composer require dothiv/dothiv-parsedown-bundle dev-master
+```
 
 Add
 
+```
     new Dothiv\Bundle\ParsedownBundle\DothivParsedownBundle(),
+```
 
 to your `AppKernel.php`.
 
 ## Usage
 
 In twig templates:
-
+```
     {{ var|markdown }}
+```
 
+In FOSCommentBundle:
 
+```
+fos_comment:
+    service:
+        markup: dothiv_parsedown.service.parsedown
+```
+
+Also see https://github.com/FriendsOfSymfony/FOSCommentBundle/blob/master/Resources/doc/9-using_a_markup_parser.md

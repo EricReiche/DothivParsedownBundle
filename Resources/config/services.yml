@@ -1,0 +1,6 @@
+parameters:
+    dothiv_parsedown.service.parsedown.class: Dothiv\Bundle\ParsedownBundle\Service\Parser
+
+services:
+    dothiv_parsedown.service.parsedown:
+        class: %dothiv_parsedown.service.parsedown.class%
